@@ -1,0 +1,52 @@
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">云账本</view>
+</cu-custom>
+<van-tabs swipeable animated sticky color="#008DF0" offset-top="{{CustomBar}}">
+	<van-tab title="未完成项目">
+		<view class="cu-card case">
+			<block wx:if="{{unfinishList.length>0}}">
+				<view class="cu-item shadow" catchtap="detail" wx:for="{{unfinishList}}" wx:key="index" data-id="{{item._id}}">
+					<van-panel title="{{item.name}}" desc="{{item.location.address}}">
+					</van-panel>
+				</view>
+				<view wx:if="{{unfinishIsEnd}}" class="cu-item shadow padding text-center">
+					<view class="title">
+						<view class="text-cut">没有更多了</view>
+					</view>
+				</view>
+			</block>
+			<block wx:else>
+				<view class="cu-item shadow padding text-center">
+					<view class="title">
+						<view class="text-cut">没有未完成项目</view>
+					</view>
+				</view>
+			</block>
+
+		</view>
+
+	</van-tab>
+	<van-tab title="已完成项目">
+		<view class="cu-card case {{isCard?'no-card':''}}">
+			<block wx:if="{{finishList.length>0}}">
+				<view class="cu-item shadow" catchtap="detail" wx:for="{{finishList}}" wx:key="index"  data-id="{{item._id}}">
+					<van-panel title="标题" desc="描述信息">
+					</van-panel>
+				</view>
+				<view wx:if="{{unfinishIsEnd}}" class="cu-item shadow padding text-center">
+					<view class="title">
+						<view class="text-cut">没有更多了</view>
+					</view>
+				</view>
+			</block>
+			<block wx:else>
+				<view class="cu-item shadow padding text-center">
+					<view class="title">
+						<view class="text-cut">没有已完成项目</view>
+					</view>
+				</view>
+			</block>
+		</view>
+	</van-tab>
+</van-tabs>
+<image class="add_project" src="/images/add_project.png" bindtap="addProject"></image>

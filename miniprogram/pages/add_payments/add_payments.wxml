@@ -1,0 +1,22 @@
+<view class="cu-card article">
+	<view class="cu-item shadow padding">
+		<view class="flex align-center text-center text-lg">
+			<view class="flex-sub radius">
+				结算金额
+			</view>
+			<view class="flex-treble radius">
+				<input class="input-box margin-xs" style="width:100%" type="digit" placeholder="输入结算金额" bindinput="inputMoney"></input>
+			</view>
+		</view>
+	</view>
+  <view class="cu-item shadow padding-xs">
+		<view class="title">结算备注</view>
+		<view class="cu-form-group align-start">
+			<textarea maxlength="-1" bindinput="inputDescription" placeholder="请输入结算备注，可以不输入"></textarea>
+		</view>
+	</view>
+	<view class="cu-item shadow padding">
+    <button class="cu-btn bg-blue lg block" disabled="{{savaBtnIsDisabled}}" bindtap="save">保存</button>
+	</view>
+</view>
+<van-toast id="van-toast" />

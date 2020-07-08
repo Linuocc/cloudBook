@@ -1,0 +1,18 @@
+.input-password {
+  border: 5rpx solid #008DF0;
+  height: 80rpx;
+  width: 400rpx;
+  font-size: 50rpx;
+  text-align: center;
+
+  border-radius: 10rpx;
+  box-sizing: border-box;
+}
+
+.input-box {
+  position: absolute;
+  left: 50%;
+  margin-left: -200rpx;
+  top: 40%;
+  margin-top: -40rpx;
+}

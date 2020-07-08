@@ -1,0 +1,8 @@
+.input-box{
+  border: 5rpx solid #008DF0;
+  box-sizing: border-box;
+  height: 80rpx;
+  width: 150rpx;
+  border-radius: 10rpx;
+  margin: 0 auto;
+}

@@ -1,0 +1,124 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"compileHotReLoad": false,
+		"useIsolateContext": true
+	},
+	"appid": "wxfd9a0e23088dc5c0",
+	"projectname": "%E8%B4%A6%E6%9C%AC",
+	"libVersion": "2.10.4",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/add_project/add_project",
+					"pathName": "pages/add_project/add_project",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/project_detail/project_detail",
+					"pathName": "pages/project_detail/project_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/add_money/add_money",
+					"pathName": "pages/add_money/add_money",
+					"query": "id=16543212345132",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "check",
+					"pathName": "pages/check/check",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/add_payments/add_payments",
+					"pathName": "pages/add_payments/add_payments",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pages/money_detail/money_detail",
+					"pathName": "pages/money_detail/money_detail",
+					"query": "id=b7d9f2ea5f0141d2006b3f1877d725ff",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/share/share",
+					"pathName": "pages/share/share",
+					"query": "id=b7d9f2ea5f0163d1006c811b766d1fb1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/payments_detail/payments_detail",
+					"pathName": "pages/payments_detail/payments_detail",
+					"query": "id=f188d1a95f01d7f300628c3e1aa917bf",
+					"scene": null
+				}
+			]
+		}
+	}
+}

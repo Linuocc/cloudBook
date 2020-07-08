@@ -1,0 +1,84 @@
+<view class="cu-card article">
+	<view class="cu-item shadow padding">
+		<view class="flex align-center">
+			<view class="flex-twice radius">
+				<view class="cu-capsule round lg">
+					<view class="cu-tag bg-blue ">
+						长度
+					</view>
+					<view class="cu-tag line-blue">
+						{{length}}米
+					</view>
+				</view>
+
+			</view>
+			<view class="flex-sub radius">
+				<button class="cu-btn bg-orange sm" bindtap="reset">归零</button>
+			</view>
+			<view class="flex-twice radius">
+				<input class="input-box text-center" type="digit" placeholder="输入长度" bindinput="inputLength"></input>
+			</view>
+			<view class="flex-sub radius">
+				<button class="cu-btn round bg-blue text-bold" bindtap="addLength">+</button>
+			</view>
+		</view>
+
+
+	</view>
+	<view class="cu-item shadow padding-xs">
+		<view class="flex align-center">
+			<view class="flex-sub text-center radius">
+				宽度（米）
+				<input class="input-box margin-xs" type="digit" placeholder="输入宽度" bindinput="inputWidth"></input>
+			</view>
+			<view class="flex-sub text-center radius">
+				价格（元）
+				<input class="input-box margin-xs" type="digit" placeholder="输入单价" bindinput="inputPrice"></input>
+			</view>
+		</view>
+	</view>
+	<view class="cu-item shadow padding-xs">
+		<view class="flex align-center text-center text-lg">
+			<view class="flex-sub padding-sm bg-blue radius">{{length}}</view>
+			<view class="flex-sub padding-sm radius">X</view>
+			<view class="flex-sub padding-sm bg-blue radius">{{width}}</view>
+			<view class="flex-sub padding-sm radius">X</view>
+			<view class="flex-sub padding-sm bg-blue radius">{{price}}</view>
+			<view class="flex-sub padding-sm radius">=</view>
+			<view class="flex-sub padding-sm bg-blue radius">{{totalPrices}}</view>
+		</view>
+
+	</view>
+	<view class="cu-item shadow padding-xs">
+		<view class="flex  align-center">
+			<view class="flex-treble">
+				<button class="cu-btn block bg-blue margin-sm lg" bindtap="computed">
+					<text class="cuIcon-edit"></text> 计算</button>
+			</view>
+		</view>
+
+	</view>
+
+	<view class="cu-item shadow padding-xs">
+		<view class="flex align-center text-center text-lg">
+			<view class="flex-sub radius">
+				其他费用
+			</view>
+			<view class="flex-twice radius">
+				<input class="input-box margin-xs" style="width:100%" type="digit" placeholder="输入其他费用，没有可不输入" bindinput="inputOtherMoney"></input>
+			</view>
+		</view>
+
+	</view>
+
+	<view class="cu-item shadow padding-xs">
+		<view class="title">费用说明</view>
+		<view class="cu-form-group align-start">
+			<textarea maxlength="-1" bindinput="inputDescription" placeholder="请输入费用说明"></textarea>
+		</view>
+	</view>
+	<view class="cu-item shadow padding-xs">
+		<button class="cu-btn lg" style="width:100%;background:#1ED76D;color:white" disabled="{{savaBtnIsDisabled}}" bindtap="save">保存</button>
+	</view>
+</view>
+<van-toast id="van-toast" />

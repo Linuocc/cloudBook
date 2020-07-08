@@ -1,0 +1,86 @@
+<view class="UCenter-bg">
+	<view class="flex solid-bottom padding align-center">
+		<view class="margin-xs radius">{{projectData.name}}</view>
+		<view class="margin-xs radius">
+			<button class="cu-btn text-red" style="background:none" bindtap="deleteProject">
+				<text class="cuIcon-delete"></text>
+			</button>
+		</view>
+	</view>
+
+
+</view>
+<view class="padding flex text-center text-grey bg-white">
+	<view class="flex flex-sub flex-direction solid-right">
+		<view class="text-xxl text-orange">{{totalPrice}}</view>
+		<view class="margin-top-sm">
+			<text class="cuIcon-attentionfill"></text> 总费用</view>
+	</view>
+	<view class="flex flex-sub flex-direction solid-right">
+		<view class="text-xxl text-blue">{{totalPayment}}</view>
+		<view class="margin-top-sm">
+			<text class="cuIcon-favorfill"></text> 已结算</view>
+	</view>
+	<view class="flex flex-sub flex-direction">
+		<view class="text-xxl text-green">{{notPayment}}</view>
+		<view class="margin-top-sm">
+			<text class="cuIcon-fork"></text> 未结算</view>
+	</view>
+</view>
+<van-tabs animated sticky color="#008DF0">
+	<van-tab title="费用记录">
+		<view class="cu-card case">
+			<block wx:if="{{expenses.length>0}}">
+				<view class="cu-item shadow" catchtap="moneyDetail" wx:for="{{expenses}}" wx:key="index" data-id="{{item._id}}">
+					<van-panel title="{{item.description}}" desc="总计：{{item.totalPrices*1+item.otherMoney*1}}元" status="{{item.createTime}}">
+					</van-panel>
+				</view>
+				<view wx:if="{{expensesIsEnd}}" class="cu-item shadow padding text-center">
+					<view class="title">
+						<view class="text-cut">没有更多了</view>
+					</view>
+				</view>
+			</block>
+			<block wx:else>
+				<view class="cu-item shadow padding text-center">
+					<view class="title">
+						<view class="text-cut">没有费用记录</view>
+					</view>
+				</view>
+			</block>
+		</view>
+		<view style="height:100rpx"></view>
+	</van-tab>
+	<van-tab title="结算记录">
+		<view class="cu-card case">
+			<block wx:if="{{payments.length>0}}">
+				<view class="cu-item shadow" bindtap="paymentDetail" wx:for="{{payments}}" wx:key="index" data-id="{{item._id}}">
+					<van-panel title="{{item.paymentMoney}}元" desc="{{item.description}}" status="{{item.createTime}}">
+					</van-panel>
+				</view>
+				<view wx:if="{{paymentsIsEnd}}" class="cu-item shadow padding text-center">
+					<view class="title">
+						<view class="text-cut">没有更多了</view>
+					</view>
+				</view>
+			</block>
+			<block wx:else>
+				<view class="cu-item shadow padding text-center">
+					<view class="title">
+						<view class="text-cut">没有费用记录</view>
+					</view>
+				</view>
+			</block>
+		</view>
+		<view style="height:100rpx"></view>
+	</van-tab>
+</van-tabs>
+<view class="flex btn-area">
+	<view class="flex-sub  margin-xs radius">
+		<button class="cu-btn bg-green lg" bindtap="addMoney">添加费用</button>
+	</view>
+	<view class="flex-sub  margin-xs radius">
+		<button class="cu-btn bg-blue lg" bindtap="addPayments">添加结算</button>
+	</view>
+</view>
+<van-toast id="van-toast" />

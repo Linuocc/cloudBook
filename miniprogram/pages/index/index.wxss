@@ -1,0 +1,7 @@
+.add_project{
+  width: 80rpx;
+  height: 80rpx;
+  position: fixed;
+  bottom: 100rpx;
+  right: 50rpx;
+}

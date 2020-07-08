@@ -1,0 +1,74 @@
+<view class="cu-card case ">
+	<view class="cu-item shadow">
+		<view class='action text-bold'>
+			<text class='cuIcon-titles text-orange '></text>备注
+		</view>
+		<view class="text-left padding">{{data.description}}</view>
+	</view>
+	<view class="cu-item shadow">
+		<view class='action text-bold'>
+			<text class='cuIcon-titles text-green'></text>计算费用
+		</view>
+		<view class="flex align-center text-center">
+			<view class="flex-sub padding-sm">
+				<view class="grid col-1 text-center">
+					<view>长</view>
+				</view>
+				<view class="grid col-1 bg-blue radius padding-xs">
+					<view>{{data.length}}</view>
+				</view>
+			</view>
+			X
+			<view class="flex-sub padding-sm">
+				<view class="grid col-1 text-center">
+					<view>宽</view>
+				</view>
+				<view class="grid col-1 bg-blue radius padding-xs">
+					<view>{{data.width}}</view>
+				</view>
+			</view>
+			X
+			<view class="flex-sub padding-sm">
+				<view class="grid col-1 text-center">
+					<view>价格</view>
+				</view>
+				<view class="grid col-1 bg-blue radius padding-xs">
+					<view>{{data.price}}</view>
+				</view>
+			</view>
+			=
+			<view class="flex-sub padding-sm">
+				<view class="grid col-1 text-center">
+					<view>计算价格</view>
+				</view>
+				<view class="grid col-1 bg-blue radius padding-xs">
+					<view>{{data.totalPrices}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="cu-item shadow">
+		<view class='action text-bold'>
+			<text class='cuIcon-titles text-blue'></text>其他费用
+		</view>
+		<view class="text-left padding">{{data.otherMoney}}</view>
+	</view>
+	<view class="cu-item shadow">
+		<view class='action text-bold'>
+			<text class='cuIcon-titles text-mauve'></text>总费用
+		</view>
+		<view class="text-left padding">{{data.totalPrices+data.otherMoney}}</view>
+	</view>
+	<view class="cu-item shadow">
+		<view class='action text-bold'>
+			<text class='cuIcon-titles text-red'></text>时间
+		</view>
+		<view class="text-left padding">{{data.createTime}}</view>
+	</view>
+	<view class="cu-item shadow">
+		<button class="cu-btn block lg bg-red" bindtap="delete">
+			<text class="cuIcon-delete"></text>删除</button>
+	</view>
+
+</view>
+<van-toast id="van-toast" />

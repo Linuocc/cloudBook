@@ -1,0 +1,5 @@
+<van-toast id="van-toast" />
+<view class="input-box">
+	<input class="input-password" password placeholder="请输入密码" bindinput="inputPassword"></input>
+	<button class="cu-btn bg-green lg block margin-top" bindtap="verify">确认</button>
+</view>

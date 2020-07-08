@@ -1,0 +1,41 @@
+<cu-custom bgColor="bg-gradual-green">
+	<view slot="content">账单明细</view>
+</cu-custom>
+<van-tabs swipeable animated sticky color="#008DF0" offset-top="{{CustomBar}}">
+	<van-tab title="费用记录">
+		<view class="cu-timeline">
+			<block wx:for="{{expenses}}" wx:key="index">
+				<view class="cu-item text-green">
+					<view class="bg-gradual-green content shadow">
+						<view class="cu-capsule radius">
+							<view class="cu-tag bg-white text-green">{{item.description}}</view>
+							<view class="cu-tag line-white">{{item.createTime}}</view>
+						</view>
+						<view class="margin-top-sm text-content">
+							<view wx:if="{{item.totalPrices!=0}}">费用：{{item.length}}(长)X{{item.width}}(宽)X{{item.price}}(价格)={{item.totalPrices}}(费用)</view>
+							<view>其他费用：{{item.otherMoney}}</view>
+							<view>总费用：￥{{item.totalPrices+item.otherMoney}}</view>
+						</view>
+					</view>
+				</view>
+			</block>
+		</view>
+	</van-tab>
+	<van-tab title="结算记录">
+		<view class="cu-timeline">
+			<block wx:for="{{payments}}" wx:key="index">
+				<view class="cu-item text-green">
+					<view class="bg-gradual-green content shadow">
+						<view class="cu-capsule radius">
+							<view class="cu-tag bg-white text-green">{{item.description?item.description:'无描述'}}</view>
+							<view class="cu-tag line-white">{{item.createTime}}</view>
+						</view>
+						<view class="margin-top-sm text-content">
+							<view>结算金额：￥{{item.paymentMoney}}</view>
+						</view>
+					</view>
+				</view>
+			</block>
+		</view>
+	</van-tab>
+</van-tabs>

@@ -1,0 +1,27 @@
+
+<view class="cu-card case ">
+	<view class="cu-item shadow">
+		<view class='action text-bold'>
+			<text class='cuIcon-titles text-orange '></text>备注
+		</view>
+		<view class="text-left padding">{{data.description?data.description:'无'}}</view>
+	</view>
+	<view class="cu-item shadow">
+		<view class='action text-bold'>
+			<text class='cuIcon-titles text-blue'></text>结算金额
+		</view>
+		<view class="text-left padding">{{data.paymentMoney}}</view>
+	</view>
+	<view class="cu-item shadow">
+		<view class='action text-bold'>
+			<text class='cuIcon-titles text-red'></text>时间
+		</view>
+		<view class="text-left padding">{{data.createTime}}</view>
+	</view>
+	<view class="cu-item shadow">
+		<button class="cu-btn block lg bg-red" bindtap="delete">
+			<text class="cuIcon-delete"></text>删除</button>
+	</view>
+
+</view>
+<van-toast id="van-toast" />

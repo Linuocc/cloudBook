@@ -1,0 +1,13 @@
+<view class="cu-form-group">
+	<view class="title">项目名称</view>
+	<input placeholder="请输入项目名称" bindinput="inputName"></input>
+</view>
+<view class="cu-form-group">
+	<view class="title">项目位置</view>
+	<input placeholder="请选择位置" value="{{location.address}}" disabled></input>
+	<button class="cu-btn bg-green shadow" bindtap="chooseAddress" disabled="{{isDisabled}}">选择位置</button>
+</view>
+
+
+<button class="cu-btn bg-blue lg save-btn" bindtap="saveProject" disabled="{{savaBtnIsDisabled}}">保存</button>
+<van-toast id="van-toast" />

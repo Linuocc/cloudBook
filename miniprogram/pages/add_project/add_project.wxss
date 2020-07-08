@@ -1,0 +1,7 @@
+.save-btn{
+  position: fixed;
+  bottom: 50rpx;
+  width: 90%;
+  left: 50%;
+  margin-left: -45%;
+}
