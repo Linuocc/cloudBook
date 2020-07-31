@@ -16,6 +16,10 @@ Page({
     this.setData({
       id:options.id
     })
+    
+
+  },
+  onShow(){
     wx.showLoading({
       title: '加载中',
     })
@@ -33,8 +37,13 @@ Page({
       })
 
     })
-
   },
+  edit(){
+    wx.navigateTo({
+      url: `/pages/edit_money/edit_money?id=${this.data.id}`,
+    })
+  },
+  //删除费用
   delete(){
     wx.showModal({
       title:'提示',

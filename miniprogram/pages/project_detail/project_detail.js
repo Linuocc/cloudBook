@@ -27,11 +27,10 @@ Page({
     })
     
     
-    
   },
   onShow(){
     wx.showLoading({
-      title: '加载中...',
+      title: "加载中",
       mask:true
     })
     this.setData({
@@ -201,7 +200,7 @@ Page({
       url:`/pages/money_detail/money_detail?id=${id}`
     })
   },
-  //费用详情
+  //结算详情
   paymentDetail(option){
     // 获取id
     let id = option.currentTarget.dataset.id;
@@ -215,6 +214,13 @@ Page({
       path:`/pages/share/share?id=${this.data.id}`,
       imageUrl:'/images/share.png'
     }
-  }
+  },
+  // onShareTimeline(){
+  //   return {
+  //     title:`《${this.data.projectData.name}》的账单`,
+  //     query:`id=${this.data.id}`,
+  //     imageUrl:'/images/share.png'
+  //   }
+  // }
   
 })

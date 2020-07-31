@@ -29,7 +29,7 @@
 	},
 	"appid": "wxfd9a0e23088dc5c0",
 	"projectname": "%E8%B4%A6%E6%9C%AC",
-	"libVersion": "2.10.4",
+	"libVersion": "2.11.3",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -73,7 +73,7 @@
 					"id": 2,
 					"name": "pages/project_detail/project_detail",
 					"pathName": "pages/project_detail/project_detail",
-					"query": "",
+					"query": "id=1503f3385f198efa007c2f2e61bce859",
 					"scene": null
 				},
 				{
@@ -108,7 +108,7 @@
 					"id": 7,
 					"name": "pages/share/share",
 					"pathName": "pages/share/share",
-					"query": "id=b7d9f2ea5f0163d1006c811b766d1fb1",
+					"query": "id=f11f525b5f0314ee005367603bbf9264",
 					"scene": null
 				},
 				{
@@ -116,6 +116,13 @@
 					"name": "pages/payments_detail/payments_detail",
 					"pathName": "pages/payments_detail/payments_detail",
 					"query": "id=f188d1a95f01d7f300628c3e1aa917bf",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "编辑费用",
+					"pathName": "pages/edit_money/edit_money",
+					"query": "id=b58263a25f241c3a002c334b597c548c",
 					"scene": null
 				}
 			]

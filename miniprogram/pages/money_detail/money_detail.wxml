@@ -66,6 +66,10 @@
 		<view class="text-left padding">{{data.createTime}}</view>
 	</view>
 	<view class="cu-item shadow">
+		<button class="cu-btn block lg bg-green" bindtap="edit">
+			<text class="cuIcon-edit"></text>修改</button>
+	</view>
+	<view class="cu-item shadow">
 		<button class="cu-btn block lg bg-red" bindtap="delete">
 			<text class="cuIcon-delete"></text>删除</button>
 	</view>

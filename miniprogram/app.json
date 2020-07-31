@@ -5,6 +5,7 @@
     "pages/add_project/add_project",
     "pages/project_detail/project_detail",
     "pages/add_money/add_money",
+    "pages/edit_money/edit_money",
     "pages/add_payments/add_payments",
     "pages/money_detail/money_detail",
     "pages/payments_detail/payments_detail",
